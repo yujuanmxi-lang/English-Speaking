@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7dce9">
+  <title>Bloom Speak · 英语口语冒险</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="header"><a class="brand" href="#home"><span class="brand-icon">✿</span> Bloom Speak <small>让每句话，都开花</small></a><nav aria-label="主导航"><a href="#home" data-nav="home">关卡地图</a><a href="#history" data-nav="history">我的存档</a><button id="settings-button" class="icon-button" aria-label="反馈设置">⚙</button><button id="theme-button" class="icon-button" aria-label="切换深色模式">☾</button></nav></header>
+  <main id="app"></main>
+  <footer>MADE FOR YOUR LITTLE DAILY BRAVERY <span>✧</span> 每一次开口，都值得一颗星</footer>
+  <dialog id="settings"><form id="settings-form"><div class="section-heading"><h2>反馈小工坊</h2><button type="button" id="close-settings" class="icon-button" aria-label="关闭">×</button></div><p>默认使用本地规则演示反馈。连接 GPT 后，问题与转写文本会发送到 OpenAI，录音不会上传。</p><label>反馈模式<select id="feedback-mode"><option value="demo">本地演示 · 无需密钥</option><option value="gpt">GPT · 自备 API Key</option></select></label><label>OpenAI API Key<input id="api-key" type="password" autocomplete="off" placeholder="仅保留在当前页面内存中"></label><label>模型<input id="model" value="gpt-4o-mini"></label><p class="fine">GPT 调用可能产生费用。纯前端无法安全隐藏密钥，请只在可信设备使用自己的密钥，不要将其写入代码。浏览器网络或跨域限制可能导致连接失败。</p><button class="primary" type="submit">保存设置 ✧</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <!-- 普通脚本可在 file:// 下运行，不依赖构建工具或模块服务器。 -->
+  <script src="js/scenes.js"></script><script src="js/feedback.js"></script><script src="js/app.js"></script>
+</body>
+</html>
